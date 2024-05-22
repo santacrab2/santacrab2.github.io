@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "santacrab2.github.io",
   "resources": {
-    "hash": "sha256-Cjwl9cEZFw0iR1i3NVMZB4EdYfr48bxnNxI4RtBNnyo=",
+    "hash": "sha256-vsJkJYsSpPp084qISd0k9pJAa1SkzEWU7yhqw5L/jvM=",
     "jsModuleNative": {
       "dotnet.native.8.0.5.abtwt7b7j9.js": "sha256-6SDvzY8LGDJIBpOtOI7rzY3dnnOFwUJIBDL7wbLdXW0="
     },
@@ -31,7 +31,7 @@
       "Microsoft.Extensions.Primitives.wasm": "sha256-6187ynEahDlSLMBvD4vAmiLpZ3clRb5xu6rM7O8AxNo=",
       "Microsoft.JSInterop.wasm": "sha256-Bn0+3HZM43HzpL74LGkNAxaCesPtprqqtf90S28SGCA=",
       "Microsoft.JSInterop.WebAssembly.wasm": "sha256-Kr13V+6zGL8rPvFmuBAsaEJfoMlR4Q8keJHKaVGVbGA=",
-      "santacrab2.github.io.wasm": "sha256-mlh/zLAm1K0hRhWhQymi7Y9cSnYIjzCueUlDaFJiBO4=",
+      "santacrab2.github.io.wasm": "sha256-NKlDRpukdBYPunmXO4HmawwLIwCUrqqhuMq+Yd8xoVc=",
       "System.Collections.Concurrent.wasm": "sha256-hcJzzCFysdsZwkKtaDyF6EsGEfMnqT9u7dGZXk0jTMc=",
       "System.Collections.wasm": "sha256-8Gke4XsKvJDoYP/ae1DbEoaYfJHSJUbEdSbkNrqHaSw=",
       "System.ComponentModel.wasm": "sha256-RLeTQOOEEy4QXGeQLyLNY8k+aaF4W/EDE4Gx/TW+zxY=",
