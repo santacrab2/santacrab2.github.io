@@ -1,4 +1,5 @@
-﻿@page "/"
+﻿
+@page "/"
 
 <style>
     body {
@@ -10,5 +11,14 @@
         background-color:aquamarine
     }</style>
 <PageTitle>Home</PageTitle>
+<img src="rotom.png" style="@newpos" @onmouseover="moverotom" />
 
-
+@code 
+{
+    public string newpos = "position:absolute; top:220px; left:625px; ";
+    public async Task moverotom()
+    {
+        
+        newpos= $"position:absolute; top:{new Random().Next(500)}px; left:{new Random().Next(500)}px;";
+    }
+}
