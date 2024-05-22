@@ -1,6 +1,6 @@
 ﻿
 @page "/"
-
+@inject IModalService modal
 <style>
     body {
         background-image: url("3934588.jpg");
@@ -11,11 +11,15 @@
         background-color:aquamarine
     }</style>
 <PageTitle>Home</PageTitle>
-<img src="rotom.png" style="@newpos" @onmouseover="moverotom" />
+<svg width="130" height="300" style="position:absolute; top:215px;left:640px;" xmlns="http://www.w3.org/2000/svg">
+    <rect width="80" height="70" fill="#52d3fa" />
+</svg>
+<img src="rotom.png" style="@newpos" @onmouseover="moverotom"/>
 
 @code 
 {
-    public string newpos = "position:absolute; top:220px; left:625px; ";
+    public string newpos = "position:absolute; top:215px; left:635px; ";
+
     public async Task moverotom()
     {
         
