@@ -4,14 +4,14 @@
 <style>
     body {
         background-image: url("3934588.jpg");
-        background-size: auto;
+        background-size: cover;
         background-repeat:no-repeat;
         background-position-y: -100px;
         background-color:aquamarine;
     }</style>
 <link rel="stylesheet" href="css/fonts.css">
 <PageTitle>Home</PageTitle>
-<svg width="130" height="300" style="position:absolute; top:215px;left:635px;" xmlns="http://www.w3.org/2000/svg">
+<svg width="130" height="300" style="position:fixed; top:215px;left:635px;" xmlns="http://www.w3.org/2000/svg">
     <rect width="80" height="70" fill="#52d3fa" />
 </svg>
 <img src="rotom.png" style="@newpos" @onmouseover="moverotom"/>
@@ -19,7 +19,7 @@
 
 @code 
 {
-    public string newpos = "position:absolute; top:215px; left:635px; ";
+    public string newpos = "position:fixed; top:215px; left:635px; ";
 
     public async Task moverotom()
     {
