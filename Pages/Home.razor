@@ -4,10 +4,8 @@
 <style>
     body {
         background-image: url("3934588.jpg");
-        background-size: auto;
+        background-size: 100%;
         background-repeat:no-repeat;
-        background-position-y: -100px;
-        background-color: #52d3fa;
     }</style>
 <link rel="stylesheet" href="css/fonts.css">
 <PageTitle>Home</PageTitle>
@@ -17,11 +15,11 @@
 
 @code 
 {
-    public string newpos = "position:relative; top:125px; left:650px; ";
+    public string newpos = "position:absolute; top:125px; left:50%; ";
 
     public async Task moverotom()
     {
         
-        newpos= $"position:relative; top:{new Random().Next(500)}px; left:{new Random().Next(500)}px;";
+        newpos= $"position:absolute; top:{new Random().Next(1000)}%; left:{new Random().Next(95)}%;";
     }
 }
