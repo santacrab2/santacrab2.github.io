@@ -8,19 +8,70 @@
         background-repeat:no-repeat;
         background-color: darkslategray;
         height: 100vh;
-    }</style>
+    }
+</style>
+<style>
+    @@keyframes myanimation {
+    from {  }
+
+    to {
+        position:absolute;
+        left: @leftpos;
+        top: @toppos;
+    }
+
+}
+
+    @@keyframes myanimation2 {
+        from {
+        }
+
+        to {
+            position: absolute;
+            left: @leftpos;
+            top: @toppos;
+        }}
+</style>
+    
 <link rel="stylesheet" href="css/fonts.css">
 <PageTitle>Home</PageTitle>
 <h1>THE SEA TAVERN</h1>
 
-<img src="rotom.png" style="@newpos" @onmouseover="moverotom" />
+<img src="@imagesource" width="92px" height="72px" opacity="1" style="@newpos" @onmouseover="moverotom" />
 @code 
 {
     public string newpos = "position:absolute; top:200%; left:25%; ";
-
+    public string newposgif = "position:absolute; top:200%; left:25%; ";
+    public string toppos = "200%";
+    public string ogtoppos = "200%";
+    public string leftpos = "25%";
+    public string ogleftpos = "25%";
+    public bool refresh = true;
+    public string imagesource = "rotom.png";
     public async Task moverotom()
     {
-        
-        newpos= $"position:absolute; top:{new Random().Next(1000)}%; left:{new Random().Next(95)}%;";
+        toppos = $"{new Random().Next(1000)}%";
+        leftpos = $"{new Random().Next(90)}%";
+        if (refresh)
+        {
+            imagesource = "rotomflying.gif";
+            newpos = $"position:absolute; top:{ogtoppos}; left:{ogleftpos}; animation-name: myanimation; animation-duration: 5s; animation-fill-mode: forwards;";
+            refresh = !refresh;
+            ogtoppos = toppos;
+            ogleftpos = leftpos;
+            await Task.Delay(5000);
+            imagesource = "rotom.png";
+        }
+        else
+        {
+            imagesource = "rotomflying.gif";
+            newpos = $"position:absolute; top:{ogtoppos}; left:{ogleftpos}; animation-name: myanimation2; animation-duration: 5s; animation-fill-mode: forwards;";
+            refresh = !refresh;
+            ogtoppos = toppos;
+            ogleftpos = leftpos;
+            await Task.Delay(5000);
+            imagesource = "rotom.png";
+        }
+
     }
 }
