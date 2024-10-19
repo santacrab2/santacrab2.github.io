@@ -10,7 +10,19 @@
     <PackageReference Include="Blazored.Modal" Version="7.3.1" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.3" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Core" Version="1.1.0" />
+    <PackageReference Include="PKHeX.Core" Version="24.5.5" />
     <PackageReference Include="PublishSPAforGitHubPages.Build" Version="2.2.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="scripts\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="PKHeX.Core.AutoMod">
+      <HintPath>..\PKHeX-Plugins\PKHeX.Core.AutoMod\bin\Release\net8.0\PKHeX.Core.AutoMod.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>

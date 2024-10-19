@@ -1,0 +1,33 @@
+﻿@page "/Sysbot"
+@using Microsoft.AspNetCore.SignalR.Client
+<h3 style="font-family:pokefont; top: 100%; left: 40%; text-align: center; font-size: 64px !important;">Sysbot</h3>
+<style>
+    body{
+        background-color:darkslategray;
+    }
+</style>
+<textarea name="ShowText" @bind="showdown" @bind:event="oninput" style="position:relative; left:40%" cols="80" rows="5"></textarea>
+<label style="position:relative; top: 150%">@op</label>
+<button style="position:relative; top: 150%" @onclick="tests">check legality</button>
+@code {
+    private HubConnection? hubConnection;
+    public IReadOnlyList<CheckResult> test = [];
+    public string showdown = "";
+    public string op = "failure";
+    protected override async Task OnInitializedAsync()
+    {
+        hubConnection = new HubConnectionBuilder().WithUrl("https://localhost:7012/SysbotHub?username=site").Build();
+        await hubConnection.StartAsync();
+        if (hubConnection?.State == HubConnectionState.Connected)
+            Console.WriteLine("it connected to something");
+    }
+    private void tests()
+    {
+
+        hubConnection.SendAsync("sendConvert", new ShowdownSet(showdown));
+    }
+    public void DLPK(PKM pk)
+    {
+        op = new LegalityAnalysis(pk).Report();
+    }
+}
